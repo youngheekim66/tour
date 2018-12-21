@@ -3,9 +3,51 @@
 <head>
 <title>여행-자 떠나요</title>
 <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var Links = {
+  setColor:function(color){
+    // var alist = document.querySelectorAll('a');
+    // var i = 0;
+    // while(i < alist.length){
+    //   alist[i].style.color = color;
+    //   i = i + 1;
+    // }
+    $('a').css('color',color);
+  }
+}
+var Body = {
+  setColor:function (color){
+    // document.querySelector('body').style.color = color;
+    $('body').css('color',color);
+  },
+  setBackgroundColor:function (color){
+    // document.querySelector('body').style.backgroundColor = color;
+    $('body').css('backgroundColor',color);
+  }
+}
+function nightDayHandler(self){
+  var target = document.querySelector('body');
+  if(self.value === '야간'){
+    Body.setBackgroundColor('black');
+    Body.setColor('white');
+    self.value = '주간';
+    Links.setColor('white');
+  } else {
+    Body.setBackgroundColor('white');
+    Body.setColor('black');
+    self.value = '야간';
+    Links.setColor('blue');
+  }
+}
+</script>
+<link ref="stylesheet" href="style.css">
 </head>
 <body>
 <h1><a href="index.html">누구나 자유여행</a></h1>
+<input id="night_day" type="button" value="야간" onclick="
+  nightDayHandler(this);
+">
 <ol>
   <li><a href="1.html">볼만한 곳</a></li>
   <li><a href="2.html">음식점</a></li>
@@ -14,25 +56,5 @@
   <li><a href="https://cafe.naver.com/goalla" target="_blank" title="고알라">기타정보</a></li>
 </ol>
 <h2>일정</h2>
-<p><div id="disqus_thread"></div>
-<script>
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://tour-2.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>
 </body>
 </html>

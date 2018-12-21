@@ -3,38 +3,27 @@
 <head>
 <title>여행-자 떠나요</title>
 <meta charset="utf-8">
+<script src="colors.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link ref="stylesheet" href="style.css">
 </head>
 <body>
-<h1><a href="index.html">누구나 자유여행</a></h1>
-<ol>
-  <li><a href="1.html">볼만한 곳</a></li>
-  <li><a href="2.html">음식점</a></li>
-  <li><a href="3.html">일정</a></li>
-  <li><a href="4.html">경비</a></li>
-  <li><a href="https://cafe.naver.com/goalla" target="_blank" title="고알라">기타정보</a></li>
-</ol>
-<h2>음식점</h2>
-<p style="margin-top:5px">비엔티안 바나나 식당</p>
-<img src="바나나식당.jpg" width="70%" style="transform:rotate(90deg)";>
-  <p><div id="disqus_thread"></div>
-  <script>
-  /**
-  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-  /*
-  var disqus_config = function () {
-  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-  */
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://tour-2.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </p>
+  <h1><a href="index.html">누구나 자유여행</a></h1>
+  <input id="night_day" type="button" value="야간" onclick="
+    nightDayHandler(this);
+  ">
+<div id="grid">
+  <ol>
+    <li><a href="1.html">볼만한 곳</a></li>
+    <li><a href="2.html">음식점</a></li>
+    <li><a href="3.html">일정</a></li>
+    <li><a href="4.html">경비</a></li>
+    <li><a href="https://cafe.naver.com/goalla" target="_blank" title="고알라">기타정보</a></li>
+  </ol>
+    <div id="음식점">
+    <h2>음식점</h2>
+    <p style="margin-top:5px">비엔티안 라오키친 :비엔티안 센터에 위치해 있어서 찾아가기도 어렵지 않아요. 라오스 음식을 맛보고 싶으신 분들은 한번쯤 가보세요. 특히스프링롤이 맛있기로 유명합니다.</p><br><br><br><br><br><br>
+      </div>
+  </div>
 </body>
 </html>
